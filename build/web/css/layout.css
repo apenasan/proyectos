@@ -1,0 +1,401 @@
+/**************************************************************
+   AUTHOR:  Pat Heard (fullahead.org)
+   DATE:    2007.11.08
+   PURPOSE: Controls the site layout
+ **************************************************************/
+
+
+/**************************************************************
+   Header: holds title box, menu, main image and top actions
+ **************************************************************/
+ 
+#header {
+  margin-top: 25px;
+  background: #D1FFFE url(../img/bg/leaves.jpg) no-repeat bottom right;
+}
+
+
+
+/**************************************************************
+   #title: Red block with leaves, title and tagline
+ **************************************************************/
+
+#header #title {
+  color: #FFF;
+  background: #c02b0e url(../img/bg/title.gif) repeat-x top left;
+  border-bottom: 1px solid #9a2116; 
+}
+
+#header #title h1 {
+  padding-top: 60px;
+  color: #FFF;
+  background: url(../img/bg/title_leaves.gif) no-repeat top right;
+}
+
+#header #title a {
+  color: #FFF5BD;
+}
+
+#header #title a:hover {
+  border-color: #FFF5BD;
+}
+
+
+/**************************************************************
+   #menu: Main site menu
+ **************************************************************/
+
+#header #menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;  
+}
+
+#header #menu li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#header #menu li a {  
+  display: block;
+  padding: 5px 12px;
+  
+  font: 1.4em arial, serif;
+  letter-spacing: -0.05em;
+  text-decoration: none;
+  
+  color: #bf9a82;  
+  background-color: #5F371C;
+  border-top: 6px solid #FFF;
+  border-bottom: 1px solid #361703;
+}
+
+#header #menu li a:hover {
+  color: #FFF;
+  background: #40200A url(../img/bg/menu_arrow.gif) no-repeat center left;
+}
+
+
+#header #menu li ul {
+  display: none;  
+}
+
+#header #menu li.here {
+  display: block;
+  padding: 5px 0 3px 0;
+  background: #401F09 url(../img/bg/menu_active.gif) repeat-x top left;  
+  border-top: 6px solid #FFF;
+}
+
+#header #menu li.here a {
+  display: inline;   
+  padding: 0 12px;
+  color: #FFF;
+  background: url(../img/bg/menu_arrow.gif) no-repeat center left;
+  border: 0;
+}
+
+#header #menu li.here ul {
+  display: block;
+  padding: 0;
+  margin: 5px 0;
+}
+
+#header #menu li.here ul li {
+  display: inline;
+}
+
+#header #menu li.here ul li a {
+  display: block;
+  margin: 0 7px; 
+  padding: 2px 5px;
+  font-size: 1em;
+  letter-spacing: 0em;
+  background: none;
+}
+
+#header #menu li.here ul li a:hover {
+  background: #381B08;
+}
+
+
+
+/**************************************************************
+   #subMenu: Search field and sub menu items
+ **************************************************************/
+
+#header #subMenu {
+  font-size: 0.85em;
+  background: #c6f7f8 url(../img/bg/subMenu.gif) repeat-x bottom left;
+}
+
+#header #subMenu form {
+  margin: 0;
+}
+
+#header #subMenu ul {
+  float: right;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+}
+
+#header #subMenu ul li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#header #subMenu ul li a {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+#header #subMenu ul li a.iconRSS,
+#header #subMenu ul li a:hover.iconRSS{
+  margin-right: 0;
+  padding-right: 20px;
+  background: url(../img/icons/rss.gif) no-repeat 90% 50%;
+}
+
+#header #subMenu ul li a:hover {
+  border-color: #62c1c1;
+}
+
+#header #subMenu form {
+  float: left;
+  padding: 5px;
+}
+
+/* Hidden, but present for accessibility */
+#header #subMenu label,
+#header #subMenu input.button {
+  display: none;
+}
+
+#header #subMenu input {
+  color: #3ca2a2;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #64d5d5;
+}
+
+#header #subMenu input:focus {
+  color: #42210B;
+}
+
+/**************************************************************
+   #content: Main content section (holds columns)
+ **************************************************************/
+
+#content {
+  clear: both;
+}
+
+
+
+
+/**************************************************************
+   #footer: Holds bottom menu and copyright info
+ **************************************************************/
+
+#footer {
+  font-size: 0.85em;
+  color: #BF9A82;
+  background: #3F1F09 url(../img/bg/footer.gif) repeat-x top left;
+  
+  /* Force all browsers to respect space underneath footer - margins are inconsistent */
+  border-top: 25px solid #FFF; 
+  border-bottom: 25px solid #FFF; 
+}
+
+#footer a {
+  color: #FFF;
+}
+
+#footer a:hover {
+  border-color: #7f563a;
+}
+
+#footer p {
+  padding: 10px 12px;
+}
+
+#footer ul {
+  margin: 0;
+  padding: 10px 12px 60px 12px;
+  list-style: none;  
+}
+
+#footer ul li {
+  margin: 0;
+  padding: 0 8px;
+  display: inline;
+  border-left: 1px solid #7F563A;
+}
+
+#footer ul li.first {
+  padding-left: 0;
+  border: 0;
+}
+
+
+
+/**************************************************************
+   A post item: blue meta column stretches height of the post.
+ **************************************************************/
+
+.post {  
+  margin-bottom: 20px;
+  background: #b7fffc url(../img/bg/lightblue.jpg);
+}
+
+.post .meta {
+  border-top: 20px solid #FFF;
+}
+
+.post .meta .thumb {
+  position: relative;
+  display: block;
+  margin: 6px;  
+  text-decoration: none;
+}
+
+.post .meta a:hover.thumb {
+  border: 0;
+}
+
+.post .text {
+  padding-bottom: 1px;
+  background: #FFF;
+  border-left: 6px solid #FFF;
+}
+
+
+/**************************************************************
+   Big Links
+ **************************************************************/
+ 
+ul.bigLinks {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+   
+}
+ 
+ul.bigLinks li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+ 
+ul.bigLinks li a,
+ul.bigLinks li a:visited {  
+  display: block;
+ 
+  margin: 10px 0;
+  padding: 5px 12px;
+ 
+  text-decoration: none;
+  border: 0;  
+}
+ 
+ul.bigLinks li a:hover {
+  background: #b7fffc url(../img/bg/lightblue.jpg) repeat-x bottom left;
+  border: 0;
+}
+ 
+ul.bigLinks li a span.title {
+  font: bold 0.9em arial, sans-serif;
+  text-transform: uppercase;
+  color: #3ca2a2;
+}
+ 
+ 
+ul.bigLinks li a span.desc {
+  display: block;
+  color: #42210B;
+} 
+
+
+
+
+
+/**************************************************************
+   Global width classes
+ **************************************************************/
+
+.width25 {
+  width: 244px;
+}
+
+.width50 {
+  width: 494px;
+}
+
+.width75 {
+  width: 744px;
+}
+
+.width100 {
+  width: 994px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.rightMargin {
+  margin-right: 6px;
+}
+
+.rightBorder {
+  border-right: 6px solid #FFF;
+}
+
+
+
+/**************************************************************
+   Utility Classes
+ **************************************************************/
+ 
+.floatRight {
+  float: right;
+}
+ 
+.floatLeft {
+  float: left;
+}
+ 
+.clear {
+  clear: both;
+}
+ 
+.block {
+  display: block;
+}
+ 
+.alignRight {
+  text-align: right;
+}
+ 
+.alignJustify {
+  text-align: justify;
+}
+ 
+.small {
+  font-size: 0.8em;
+}
+ 
+.highlight {
+  background: #fffdcd;
+  border-bottom: 1px solid #ffd909;
+}
+ 
+.highlight a {
+  color: #FFA509;
+}
+ 
+.highlight a:hover {
+  border-color: #fdce72;
+}
